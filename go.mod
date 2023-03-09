@@ -1,4 +1,4 @@
-module github.com/cosmos/cosmos-db
+module github.com/BlockPILabs/cosmos-db
 
 go 1.19
 
