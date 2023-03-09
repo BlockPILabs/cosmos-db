@@ -1,4 +1,4 @@
-module github.com/BlockPILabs/cosmos-db
+module ggithub.com/tendermint/tm-db
 
 go 1.19
 
