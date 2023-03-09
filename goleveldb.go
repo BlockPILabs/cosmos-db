@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/spf13/cast"
 	"github.com/syndtr/goleveldb/leveldb"
 	"github.com/syndtr/goleveldb/leveldb/errors"
 	"github.com/syndtr/goleveldb/leveldb/filter"
@@ -14,7 +13,7 @@ import (
 
 func init() {
 	dbCreator := func(name string, dir string, opts Options) (DB, error) {
-		return NewGoLevelDB(name, dir, opts)
+		return NewGoLevelDB(name, dir)
 	}
 	registerDBCreator(GoLevelDBBackend, dbCreator, false)
 }
