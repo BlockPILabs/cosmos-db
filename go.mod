@@ -1,4 +1,4 @@
-module ggithub.com/tendermint/tm-db
+module github.com/tendermint/tm-db
 
 go 1.19
 
