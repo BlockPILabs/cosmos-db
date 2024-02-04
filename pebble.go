@@ -74,7 +74,7 @@ var _ DB = (*PebbleDB)(nil)
 
 func NewPebbleDB(name string, dir string, opts Options) (DB, error) {
 	do := &pebble.Options{
-		MaxConcurrentCompactions: func() int { return 3 }, // default 1
+		MaxConcurrentCompactions: func() int { return int(math.Max(float64(runtime.NumCPU()), 3)) }, // default 1
 		MaxOpenFiles: 65535,
 	}
 
